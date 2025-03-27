@@ -3,7 +3,7 @@ This project uses SQL to analyse a Zomato sales dataset in order to gain signifi
 
 Objective : To leverage SQL for analyzing Zomato sales data, aiming to uncover sales patterns and insights that can inform strategic decisions and boost overall business efficiency.
 
-Analysis Summary : In this pizza sales analysis project, several key insights were derived from the data using SQL:
+Analysis Summary : In this Zomato sales analysis project, several key insights were derived from the data using SQL:
 
 Highest-Priced Dishes: The analysis identified the most expensive pizza on the menu, providing insights into premium product offerings.
 Most Common Dishes Ordered: By examining order frequencies, the most popular Dish among customers was determined, helping in understanding customer preferences.
