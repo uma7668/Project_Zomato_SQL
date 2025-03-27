@@ -47,7 +47,6 @@ select * from users;
 select sales.user_id, sum(products.price) TotalAmount_Spent from sales inner join products on sales.product_id = products.product_id
 group by sales.user_id;
 
-
 ----------2. SQL Query to find How Many Days has each customer visited Zomato?
 select user_id, count(distinct Order_date) as Visited_days from sales
 group by user_id;
@@ -64,7 +63,6 @@ group by Product_id
 order by count(Product_id) desc)
 group by user_id
 
-
 ----------5. SQL Query to find the most popular item for each customer?
 
 select c.*, rank() over(partition by user_id order by cnt desc) from 
@@ -80,12 +78,10 @@ inner join goldusers_signup on sales.user_id = goldusers_signup.user_id and Orde
 
 ----------7. SQL Query to find which item was purchased before the customer has become goldmember?
 
-
 select * from 
 (select *, rank() over(partition by user_id order by Order_date desc) rnk from
 (select sales.user_id, sales.Order_Date, sales.Product_id, goldusers_signup.Membership from sales
 inner join goldusers_signup on sales.user_id = goldusers_signup.user_id and Order_Date <= Membership) a) b where rnk = 1;
-
 
 
 ---------8. SQL Query to find the total orders and total amount spent for each member before they become goldmember
